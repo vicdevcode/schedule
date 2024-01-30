@@ -5,8 +5,7 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-
-	"github.com/vicdevcode/init_template/internal/controller/http/v1/exception"
+	"github.com/vicdevcode/schedule/internal/controller/http/v1/exception"
 )
 
 type deleteResponse struct {

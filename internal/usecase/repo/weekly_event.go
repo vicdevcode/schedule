@@ -3,9 +3,9 @@ package repo
 import (
 	"context"
 
-	"github.com/vicdevcode/init_template/internal/entity"
-	"github.com/vicdevcode/init_template/internal/model"
-	"github.com/vicdevcode/init_template/pkg/postgres"
+	"github.com/vicdevcode/schedule/internal/entity"
+	"github.com/vicdevcode/schedule/internal/model"
+	"github.com/vicdevcode/schedule/pkg/postgres"
 )
 
 type WeeklyEventRepo struct {

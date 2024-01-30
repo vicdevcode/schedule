@@ -4,9 +4,8 @@ import (
 	"log/slog"
 
 	"github.com/gin-gonic/gin"
-
-	weeklyevent "github.com/vicdevcode/init_template/internal/controller/http/v1/weekly_event"
-	"github.com/vicdevcode/init_template/internal/usecase"
+	weeklyevent "github.com/vicdevcode/schedule/internal/controller/http/v1/weekly_event"
+	"github.com/vicdevcode/schedule/internal/usecase"
 )
 
 func NewRouter(handler *gin.Engine, l *slog.Logger, uc usecase.UseCases) {

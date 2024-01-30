@@ -1,4 +1,4 @@
-module github.com/vicdevcode/init_template
+module github.com/vicdevcode/schedule
 
 go 1.21.1
 

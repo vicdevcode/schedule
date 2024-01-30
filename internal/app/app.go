@@ -7,13 +7,12 @@ import (
 	"syscall"
 
 	"github.com/gin-gonic/gin"
-
-	v1 "github.com/vicdevcode/init_template/internal/controller/http/v1"
-	"github.com/vicdevcode/init_template/internal/usecase"
-	"github.com/vicdevcode/init_template/pkg/config"
-	"github.com/vicdevcode/init_template/pkg/httpserver"
-	"github.com/vicdevcode/init_template/pkg/logger"
-	"github.com/vicdevcode/init_template/pkg/postgres"
+	v1 "github.com/vicdevcode/schedule/internal/controller/http/v1"
+	"github.com/vicdevcode/schedule/internal/usecase"
+	"github.com/vicdevcode/schedule/pkg/config"
+	"github.com/vicdevcode/schedule/pkg/httpserver"
+	"github.com/vicdevcode/schedule/pkg/logger"
+	"github.com/vicdevcode/schedule/pkg/postgres"
 )
 
 func Run(cfg *config.Config) {

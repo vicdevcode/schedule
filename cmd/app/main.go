@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/vicdevcode/init_template/internal/app"
-	"github.com/vicdevcode/init_template/pkg/config"
+	"github.com/vicdevcode/schedule/internal/app"
+	"github.com/vicdevcode/schedule/pkg/config"
 )
 
 func main() {

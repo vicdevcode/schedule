@@ -5,10 +5,9 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-
-	"github.com/vicdevcode/init_template/internal/controller/http/v1/exception"
-	"github.com/vicdevcode/init_template/internal/entity"
-	"github.com/vicdevcode/init_template/internal/model"
+	"github.com/vicdevcode/schedule/internal/controller/http/v1/exception"
+	"github.com/vicdevcode/schedule/internal/entity"
+	"github.com/vicdevcode/schedule/internal/model"
 )
 
 type createRequest struct {

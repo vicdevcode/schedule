@@ -4,8 +4,7 @@ import (
 	"log/slog"
 
 	"github.com/gin-gonic/gin"
-
-	"github.com/vicdevcode/init_template/internal/usecase"
+	"github.com/vicdevcode/schedule/internal/usecase"
 )
 
 type response struct {

@@ -1,9 +1,9 @@
 package usecase
 
 import (
-	"github.com/vicdevcode/init_template/internal/usecase/repo"
-	"github.com/vicdevcode/init_template/pkg/config"
-	"github.com/vicdevcode/init_template/pkg/postgres"
+	"github.com/vicdevcode/schedule/internal/usecase/repo"
+	"github.com/vicdevcode/schedule/pkg/config"
+	"github.com/vicdevcode/schedule/pkg/postgres"
 )
 
 type UseCases struct {

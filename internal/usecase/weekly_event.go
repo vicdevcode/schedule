@@ -4,8 +4,8 @@ import (
 	"context"
 	"time"
 
-	"github.com/vicdevcode/init_template/internal/entity"
-	"github.com/vicdevcode/init_template/internal/model"
+	"github.com/vicdevcode/schedule/internal/entity"
+	"github.com/vicdevcode/schedule/internal/model"
 )
 
 type WeeklyEventUseCase struct {

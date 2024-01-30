@@ -3,9 +3,9 @@ package main
 import (
 	"log"
 
-	"github.com/vicdevcode/init_template/internal/entity"
-	"github.com/vicdevcode/init_template/pkg/config"
-	"github.com/vicdevcode/init_template/pkg/postgres"
+	"github.com/vicdevcode/schedule/internal/entity"
+	"github.com/vicdevcode/schedule/pkg/config"
+	"github.com/vicdevcode/schedule/pkg/postgres"
 )
 
 func main() {
