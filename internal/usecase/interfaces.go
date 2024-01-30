@@ -4,16 +4,19 @@ import (
 	"context"
 
 	"github.com/vicdevcode/init_template/internal/entity"
+	"github.com/vicdevcode/init_template/internal/model"
 )
 
 type (
-	// Example
-	Example interface {
-		GetExamples(context.Context) ([]entity.Example, error)
-		CreateExample(context.Context, string) (*entity.Example, error)
+	// WeeklyEvent
+	WeeklyEvent interface {
+		FindAll(context.Context) ([]entity.WeeklyEvent, error)
+		Create(context.Context, model.CreateWeeklyEvent) (*entity.WeeklyEvent, error)
+		Delete(context.Context, string) error
 	}
-	ExampleRepo interface {
-		GetExamples(context.Context) ([]entity.Example, error)
-		CreateExample(context.Context, string) (*entity.Example, error)
+	WeeklyEventRepo interface {
+		FindAll(context.Context) ([]entity.WeeklyEvent, error)
+		Create(context.Context, model.CreateWeeklyEvent) (*entity.WeeklyEvent, error)
+		Delete(context.Context, string) error
 	}
 )

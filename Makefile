@@ -1,11 +1,17 @@
-PHONY: start
+BINARY_PATH := ./bin/app
+BINARY_MIGRATE_PATH := ./bin/migrate
+MAIN_PATH := ./cmd/app/main.go
+MIGRATE_PATH := ./cmd/migrate/main.go
 
-start:
-	@go build -o bin/app.exe cmd/app/main.go
-	@./bin/app.exe
+build:
+	@echo 'Building golang ...'
+	@GOARCH=amd64 GOOS=linux go build -o ${BINARY_PATH} ${MAIN_PATH}	
 
-PHONY: migrate
+run: build
+	@echo 'Starting server'
+	@${BINARY_PATH}
 
 migrate:
-	@go build -o bin/migrate.exe cmd/migrate/main.go
-	@./bin/migrate.exe
+	@echo 'Start migrating'
+	@GOARCH=amd64 GOOS=linux go build -o ${BINARY_MIGRATE_PATH} ${MIGRATE_PATH}	
+	@${BINARY_MIGRATE_PATH}

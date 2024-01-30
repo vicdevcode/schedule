@@ -10,7 +10,6 @@ import (
 
 	v1 "github.com/vicdevcode/init_template/internal/controller/http/v1"
 	"github.com/vicdevcode/init_template/internal/usecase"
-	"github.com/vicdevcode/init_template/internal/usecase/repo"
 	"github.com/vicdevcode/init_template/pkg/config"
 	"github.com/vicdevcode/init_template/pkg/httpserver"
 	"github.com/vicdevcode/init_template/pkg/logger"
@@ -29,7 +28,7 @@ func Run(cfg *config.Config) {
 	log.Info("Connected to postgres")
 
 	// UseCases
-	exampleUseCase := usecase.NewExample(repo.NewExample(db), cfg.ContextTimeout)
+	usecases := usecase.New(cfg, db)
 
 	// HTTP SERVER
 	gin.SetMode(gin.ReleaseMode)
@@ -37,9 +36,7 @@ func Run(cfg *config.Config) {
 		gin.SetMode(gin.DebugMode)
 	}
 	handler := gin.New()
-	v1.NewRouter(handler, log, v1.UseCases{
-		ExampleUseCase: exampleUseCase,
-	})
+	v1.NewRouter(handler, log, usecases)
 	httpServer := httpserver.New(handler, ((*httpserver.Config)(&cfg.Http)))
 
 	// Waiting signal

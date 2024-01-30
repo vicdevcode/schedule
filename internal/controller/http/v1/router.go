@@ -5,20 +5,17 @@ import (
 
 	"github.com/gin-gonic/gin"
 
+	weeklyevent "github.com/vicdevcode/init_template/internal/controller/http/v1/weekly_event"
 	"github.com/vicdevcode/init_template/internal/usecase"
 )
 
-type UseCases struct {
-	ExampleUseCase usecase.Example
-}
-
-func NewRouter(handler *gin.Engine, l *slog.Logger, uc UseCases) {
+func NewRouter(handler *gin.Engine, l *slog.Logger, uc usecase.UseCases) {
 	// Options
 	handler.Use(gin.Logger())
 	handler.Use(gin.Recovery())
 
 	h := handler.Group("/api/v1")
 	{
-		newExampleRoutes(h, uc.ExampleUseCase, l)
+		weeklyevent.New(h, uc.WeeklyEventUseCase, l)
 	}
 }
